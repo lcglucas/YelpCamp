@@ -1,0 +1,48 @@
+<% layout('layouts/boilerplate') -%>
+
+<h1 class="text-center">Add Campground</h1>
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+        <form action="/campgrounds" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+            <div class="form-group mb-3">
+                <label class="form-label" for="title">Title</label>
+                <input class="form-control" type="text" name="title" id="title" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <label class="form-label" for="location">Location</label>
+                <input class="form-control" type="text" name="location" id="location" required>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <label class="form-label" for="price">Price</label>
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="price-label">$</span>
+                    </div>
+                    <input type="number" id="price" name="price" class="form-control" aria-describedby="price-label" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <label class="form-label" for="description">Description</label>
+                <textarea class="form-control" type="text" name="description" id="description" required></textarea>
+                <div class="valid-feedback">
+                    Looks good!
+                </div>
+            </div>
+            <div class="form-group mb-3">
+                <input class="form-control" type="file" id="images" name="images" multiple required>
+            </div>
+            <div class="form-group mb-3">
+                <button class="btn btn-primary">Add Campground</button>
+            </div>
+        </form>
+    </div>
+</div>
